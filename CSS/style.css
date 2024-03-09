@@ -1,0 +1,189 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Primary Colors */
+  --v-d-Magenta: hsl(300, 43%, 22%);
+  --s-Pink: hsl(333, 80%, 67%);
+
+  /* Neutral colors */
+  --d-g-Magenta: hsl(303, 10%, 53%);
+  --l-g-magenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  font-size: 15px;
+}
+
+main {
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: var(--White);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  max-width: 1050px;
+  margin: auto;
+}
+
+.top-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-section .intro-text {
+  text-align: center;
+}
+
+.top-section .intro-text > h1 {
+  max-width: 350px;
+  margin: auto;
+  color: var(--v-d-Magenta);
+  font-weight: 900;
+  font-size: 34px;
+}
+
+.top-section .intro-text > h1 + p {
+  max-width: 400px;
+  color: var(--d-g-Magenta);
+  line-height: 1.5;
+  margin: 20px auto;
+  font-size: 17px;
+}
+
+.top-section .rates > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  max-width: 400px;
+  padding: 15px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  background-color: var(--l-g-magenta);
+  margin: 20px auto;
+  position: relative;
+}
+
+.top-section .rates .stars > img {
+  margin-right: 5px;
+}
+
+.top-section .rates > div > p {
+  font-weight: 700;
+  color: var(--v-d-Magenta);
+  font-size: 16px;
+}
+
+.container .card-container {
+  gap: 30px;
+  margin: 50px auto 0;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.card-container .card {
+  padding: 30px;
+  background-color: var(--v-d-Magenta);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  position: relative;
+}
+
+.card .info {
+  display: flex;
+  align-items: center;
+}
+
+.card .info > .title {
+  margin-left: 20px;
+}
+
+.card-container .card .info > img {
+  width: 50px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.card .info > .title > p {
+  color: var(--White);
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.card .info .title > span {
+  color: var(--s-Pink);
+}
+
+.card > p {
+  margin: 20px 0 0;
+}
+
+.card > p > q {
+  color: white;
+  line-height: 1.6;
+  word-spacing: 1px;
+}
+
+@media (min-width: 900px) {
+  .top-section {
+    flex-direction: row;
+  }
+
+  .top-section .intro-text {
+    text-align: left;
+  }
+
+  .top-section .intro-text > h1 {
+    font-size: 40px;
+    margin: 0;
+  }
+
+  .top-section .rates {
+    flex: 1;
+  }
+
+  .top-section .rates > div {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .top-section .rates > div.one {
+    left: -50px;
+  }
+
+  .top-section .rates > div.three {
+    left: 50px;
+  }
+
+  .card-container .card.two {
+    top: 20px;
+  }
+
+  .card-container .card.three {
+    top: 40px;
+  }
+
+  .container .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
